@@ -106,6 +106,28 @@
     .brand-mark {
       filter: drop-shadow(0 0 22px rgba(255,255,255,0.18));
     }
+    .hero-watermark {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-watermark img {
+      width: min(72vw, 780px);
+      opacity: 0.08;
+      filter: drop-shadow(0 0 36px rgba(255,255,255,0.08));
+      transform: translateY(-10px);
+    }
+    @media (max-width: 768px) {
+      .hero-watermark img {
+        width: min(88vw, 560px);
+        opacity: 0.07;
+        transform: translateY(6px);
+      }
+    }
   </style>
 </head>
 <body class="bg-background text-on-background font-body selection:bg-primary selection:text-on-primary">
@@ -147,10 +169,10 @@
     <section id="home" class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
       <div class="absolute inset-0 nebula-glow pointer-events-none"></div>
       <div class="absolute inset-0 particle-bg opacity-40"></div>
+      <div class="hero-watermark">
+        <img src="appdromeda-galaxy-mark.png" alt="" aria-hidden="true"/>
+      </div>
       <div class="relative z-10 max-w-5xl px-8 text-center">
-        <div class="flex justify-center mb-8">
-          <img src="appdromeda-logo.jpg" alt="Appdromeda logo" class="brand-mark h-24 w-auto md:h-32 rounded-2xl border border-white/10 bg-black p-2 shadow-2xl shadow-black/40"/>
-        </div>
         <span class="inline-block label-sm tracking-[0.2em] uppercase text-on-surface-variant font-medium mb-8 bg-surface-container/50 px-4 py-1 rounded-full border border-outline-variant/20">The New Digital Frontier</span>
         <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white tracking-tighter leading-[0.9] mb-12">
           Apps that redefine<br/>your universe

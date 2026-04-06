@@ -114,28 +114,31 @@
     }
     .hero-watermark {
       position: absolute;
-      inset: 50% auto auto 50%;
+      top: -88px;
+      left: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       pointer-events: none;
       z-index: 0;
       overflow: visible;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       width: 100%;
     }
     .hero-watermark img {
-      width: min(92vw, 1120px);
+      width: min(96vw, 1180px);
       max-width: none;
       opacity: 0.09;
       filter: drop-shadow(0 0 36px rgba(255,255,255,0.08));
-      transform: translateY(8px);
+      transform: none;
     }
     @media (max-width: 768px) {
+      .hero-watermark {
+        top: -36px;
+      }
       .hero-watermark img {
-        width: min(96vw, 760px);
+        width: min(98vw, 760px);
         opacity: 0.08;
-        transform: translateY(18px);
       }
     }
   </style>

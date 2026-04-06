@@ -106,31 +106,36 @@
     .brand-mark {
       filter: drop-shadow(0 0 22px rgba(255,255,255,0.18));
     }
+    .hero-title-wrap {
+      position: relative;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
     .hero-watermark {
       position: absolute;
-      inset: 0;
+      inset: 50% auto auto 50%;
       display: flex;
       align-items: center;
       justify-content: center;
       pointer-events: none;
       z-index: 0;
       overflow: visible;
+      transform: translate(-50%, -50%);
+      width: 100%;
     }
     .hero-watermark img {
-      width: min(74vw, 860px);
+      width: min(92vw, 1120px);
       max-width: none;
-      opacity: 0.08;
+      opacity: 0.09;
       filter: drop-shadow(0 0 36px rgba(255,255,255,0.08));
-      transform: translateY(-56px);
+      transform: translateY(8px);
     }
     @media (max-width: 768px) {
-      .hero-watermark {
-        align-items: center;
-      }
       .hero-watermark img {
-        width: min(88vw, 520px);
-        opacity: 0.07;
-        transform: translateY(-8px);
+        width: min(96vw, 760px);
+        opacity: 0.08;
+        transform: translateY(18px);
       }
     }
   </style>
@@ -174,14 +179,16 @@
     <section id="home" class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-visible">
       <div class="absolute inset-0 nebula-glow pointer-events-none"></div>
       <div class="absolute inset-0 particle-bg opacity-40"></div>
-      <div class="hero-watermark">
-        <img src="appdromeda-galaxy-mark.png" alt="" aria-hidden="true"/>
-      </div>
       <div class="relative z-10 max-w-5xl px-8 text-center">
         <span class="inline-block label-sm tracking-[0.2em] uppercase text-on-surface-variant font-medium mb-8 bg-surface-container/50 px-4 py-1 rounded-full border border-outline-variant/20">The New Digital Frontier</span>
-        <h1 class="text-6xl md:text-8xl lg:text-9xl font-black text-white tracking-tighter leading-[0.9] mb-12">
-          Apps that redefine<br/>your universe
-        </h1>
+        <div class="hero-title-wrap mb-12">
+          <div class="hero-watermark">
+            <img src="appdromeda-galaxy-mark.jpg" alt="" aria-hidden="true"/>
+          </div>
+          <h1 class="relative z-10 text-6xl md:text-8xl lg:text-9xl font-black text-white tracking-tighter leading-[0.9]">
+            Apps that redefine<br/>your universe
+          </h1>
+        </div>
         <p class="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light leading-relaxed">
           We design and build software that pushes boundaries. From concept to launch, Appdromeda Technologies Inc. delivers digital experiences that feel like the future.
         </p>

@@ -114,16 +114,18 @@
       justify-content: center;
       pointer-events: none;
       z-index: 0;
+      overflow: visible;
     }
     .hero-watermark img {
-      width: min(86vw, 940px);
+      width: min(92vw, 1100px);
+      max-width: none;
       opacity: 0.08;
       filter: drop-shadow(0 0 36px rgba(255,255,255,0.08));
       transform: translateY(-118px);
     }
     @media (max-width: 768px) {
       .hero-watermark img {
-        width: min(108vw, 760px);
+        width: min(122vw, 900px);
         opacity: 0.07;
         transform: translateY(-92px);
       }
@@ -166,7 +168,7 @@
 
   <main>
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
+    <section id="home" class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-visible">
       <div class="absolute inset-0 nebula-glow pointer-events-none"></div>
       <div class="absolute inset-0 particle-bg opacity-40"></div>
       <div class="hero-watermark">

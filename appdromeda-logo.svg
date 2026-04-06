@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+ <style>
+ .bg { fill: #000000; }
+ .stroke { fill: none; stroke: #FFFFFF; stroke-width: 22; stroke-linecap: round; stroke-linejoin: round; }
+ .thin { stroke-width: 14; }
+ .star { fill: #FFFFFF; }
+ .wordmark { fill: #FFFFFF; font-family: Arial, Helvetica, sans-serif; font-weight: 700; letter-spacing: 4px; }
+ </style>
+ </defs>
+
+ <!-- Background -->
+ <rect class="bg" x="0" y="0" width="1200" height="1200"/>
+
+ <!-- Group for tilted galaxy -->
+ <g transform="translate(600,520) rotate(-18)">
+
+ <!-- Core -->
+ <circle class="star" cx="0" cy="0" r="10"/>
+
+ <!-- LEFT SIDE (subtle E using three aligned arc segments) -->
+ <path class="stroke" d="M -220 -20
+ C -180 -120, -60 -160, 60 -120" />
+ <path class="stroke thin" d="M -230 20
+ C -170 -40, -40 -70, 80 -40" />
+ <path class="stroke thin" d="M -240 70
+ C -160 10, -20 -10, 110 20" />
+
+ <!-- RIGHT SIDE (subtle G via outer arc with a notch/gap) -->
+ <!-- Outer arc (almost closed circle but with a deliberate break to imply G) -->
+ <path class="stroke" d="M 120 -180
+ A 300 300 0 1 1 120 180" />
+ <!-- Inner return stroke to hint the G crossbar -->
+ <path class="stroke thin" d="M 120 40
+ C 80 20, 40 10, 0 10" />
+
+ <!-- Inner spiral -->
+ <path class="stroke thin" d="M 40 -10
+ C 10 -40, -40 -40, -70 -10
+ C -100 20, -80 60, -30 70
+ C 20 80, 60 50, 60 10" />
+
+ <!-- Stars -->
+ <circle class="star" cx="-320" cy="-120" r="3"/>
+ <circle class="star" cx="260" cy="-140" r="3"/>
+ <circle class="star" cx="300" cy="120" r="3"/>
+ <circle class="star" cx="-260" cy="160" r="3"/>
+ <circle class="star" cx="0" cy="-260" r="2.5"/>
+ <circle class="star" cx="180" cy="260" r="2.5"/>
+ </g>
+
+ <!-- Wordmark -->
+ <text x="600" y="1020" text-anchor="middle" class="wordmark" font-size="64">
+ APPDROMEDA.COM
+ </text>
+</svg>
